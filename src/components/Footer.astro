@@ -1,0 +1,50 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="min-[375px]:pl-4 md:pl-0 mt-16 w-full mx-auto container lg:max-w-full md:max-w-2xl` flex justify-center bg-[#F5F5F5] fixed z-10 bottom-0 left-0 right-0 print:hidden">
+<ninja-keys> </ninja-keys>
+  <div
+    class="rounded-lg w-full max-w-screen-xl mx-auto md:flex md:items-center md:justify-between px-4 py-4"
+  >
+    <span class="text-sm sm:text-center text-zinc-800/90"
+      >&copy; {currentYear}
+      <a 
+      href="https://www.linkedin.com/in/jose-andree-sanchez-tenaud" 
+      target="_blank"
+      rel="noopener noreferrer"
+      class="hover:underline">Jose Andree</a> • Casi
+      todos los derechos reservados
+    </span>
+    <span>
+      Pulsa <kbd>Cmd</kbd> + <kbd>K</kbd> para imprimir en PDF.
+    </span>
+  </div>
+</footer>
+
+<script>
+    import 'ninja-keys';
+    const ninja = document.querySelector('ninja-keys');
+    if (ninja != null) {
+        ninja.data = [
+            {
+            id: 'print',
+            title: 'Imprimir',
+            hotkey: 'ctrl+P',
+            section: 'Acciones',
+            handler: () => {
+                // it's auto register above hotkey with this handler
+                window.print();
+            },
+            }
+        ];
+    }
+</script>
+
+<style>
+    @media print {
+        ninja-keys {
+            display: none;
+        }
+    }
+</style>

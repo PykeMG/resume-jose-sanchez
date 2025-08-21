@@ -1,0 +1,40 @@
+---
+const socialLinks = [
+    { name: 'linkedin.', href: 'https://www.linkedin.com/in/jose-andree-sanchez-tenaud' , label: 'linkdin'},
+    { name: 'github.', href: 'https://github.com/PykeMG' , label: 'github'},
+];
+---
+<section class="print:py-4 py-48 w-full relative h-screen print:h-auto">
+    <div class="absolute print:hidden w-[77%] h-[85%] bg-[#F5F5F5] z-10 top-0 right-0"></div>
+    <div class="w-full mx-auto px-28 print:px-0 flex print:flex-col items-center gap-8 print:gap-0 z-10 relative">
+        <div class="w-1/2 print:w-full flex items-center justify-center">
+            <div class="max-w-[440px] print:w-full print:text-center ml-24 print:ml-0">
+                <h2 class="text-[100px] font-bold leading-29 text-[#999999] print:hidden">Hola, Soy </h2>
+                <h2 class="text-[100px] font-bold leading-29 text-[#999999] print:hidden">Jose Andree</h2>
+                <h2 class="text-[100px] font-bold leading-29 text-[#999999] hidden print:block">Jose Andree Sanchez Tenaud</h2>
+            </div>
+        </div>
+        <div class="w-[1px] bg-[#D8D8D8] h-[238px] print:hidden"></div>
+        <div class="px-19 text-[#6D6D6D] text-lg font-normal leading-9 tracking-wide w-1/2 print:w-full">
+            <p>
+                Desarrollador de software en Perú, con experiencia en GeneXus 18, AS400, DB2 y SQL. Trabajo con tecnologías web como JavaScript, TypeScript, React, Angular, Astro y HTML, creando soluciones escalables que integran sistemas legacy con frameworks modernos.
+            </p>
+            <p class="print:hidden">
+                Descarga mi CV para saber más acerca de mi.
+            </p>
+            <div class="flex items-center gap-11 mt-9 print:hidden">
+                {
+                socialLinks.map((item) => (
+                    <a 
+                        href={item.href} 
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="tracking-[6.33px] text-base font-medium text-black uppercase"
+                        aria-label={item.label}
+                    >{item.name}</a>
+                ))
+            }
+            </div>
+        </div>
+    </div>
+</section>
