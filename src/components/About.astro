@@ -2,14 +2,14 @@
 const personalImageAlt = "Jose Andree"
 ---
 <div class="px-4 print:py-4 print:mb-4 py-8 mb-20">
-    <h2 class="text-[#999999] text-[80px] font-bold">Sobre mí</h2>
-    <div class="flex w-full items-center mt-14 print:mt-4 gap-8">
-        <div class="w-2/3 print:w-full">
-            <p class="text-lg leading-9 tracking-widest text-[#6d6d6d] mt-4 text-">
+    <h2 class="text-[#999999] text-[40px] lg:text-[80px] font-bold">Sobre mí</h2>
+    <div class="flex flex-col lg:flex-row w-full items-center mt-8 lg:mt-14 print:mt-4 gap-8">
+        <div class="w-full lg:w-2/3 print:w-full">
+            <p class="lg:text-lg leading-6 lg:leading-9 tracking-widest text-[#6d6d6d] mt-4 text-base">
                 Soy José Andree, desarrollador peruano con experiencia en entornos empresariales como GeneXus 18, AS400, DB2 y SQL, trabajando con sistemas críticos y robustos. También disfruto del desarrollo web con JavaScript, TypeScript, React, Angular, Astro y HTML, creando aplicaciones modernas y escalables. Mi objetivo es seguir creciendo como profesional, combinando experiencia en sistemas legacy con frameworks actuales para aportar soluciones innovadoras de impacto real.
             </p>
         </div>
-        <div class="w-1/3 print:hidden">
+        <div class="w-full lg:w-1/3 print:hidden">
             <img src="./me.png" alt={personalImageAlt} class="rounded-full "/>
         </div>
     </div>

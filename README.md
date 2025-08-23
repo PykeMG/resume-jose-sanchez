@@ -25,7 +25,7 @@ Basado en el diseño de <a href="https://www.figma.com/community/file/8837663630
 </div>
 
 <p></p>
-
+n
 <img src="portada.png"></img>
 
 ## 🛠️ Stack

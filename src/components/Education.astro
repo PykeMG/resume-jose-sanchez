@@ -17,18 +17,18 @@ const educacionItems = [
     }
 ];
 ---
-<div class="px-4 py-8 print:py-8 print:mb-0 mb-20 print:mt-50">
-    <h2 class="text-[#999999] text-[80px] font-bold">Educación</h2>
-    <div class="mt-14 w-full print:mt-4">
+<div class="px-4 py-8 print:py-8 print:mb-0 lg:mb-20 print:mt-50">
+    <h2 class="text-[#999999] text-[40px] lg:text-[80px] font-bold">Educación</h2>
+    <div class="mt-8 lg:mt-14 w-full print:mt-4">
         {
             educacionItems.map((item) => (
                 <div class="mb-8 w-full items-start gap-8">
                     <div>
-                        <h3 class="font-medium text-2xl tracking-[0.64px] leading-8 text-[#6d6d6d]">{item.institution}</h3>
+                        <h3 class="font-medium text-xl lg:text-2xl tracking-[0.64px] leading-8 text-[#6d6d6d]">{item.institution}</h3>
                         <p class="text-lg tracking-widest leading-9 text-[#7e7c7c] font-medium opacity-60">{item.date}</p>
                     </div>
                     <div>
-                        <p class="text-lg leading-8 tracking-widest text-[#6d6d6d]">{item.degree}</p>
+                        <p class="text-xs lg:text-lg lg:leading-8 tracking-widest text-[#6d6d6d]">{item.degree}</p>
                     </div>
                 </div>
             ))

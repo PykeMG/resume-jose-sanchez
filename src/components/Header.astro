@@ -6,15 +6,15 @@ const navItems = [
 ];
 ---
 
-<header id="site-header" class="fixed w-screen py-8 flex items-center justify-between px-4 z-30 transition-all duration-300 print:hidden bg-transparent">
-  <nav class="w-full flex items-center space-x-4 mr-[119px]">
-    <ul class="w-full flex justify-end gap-8 uppercase">
+<header id="site-header" class="fixed w-screen py-4 lg:py-8 flex items-center justify-between px-4 z-30 transition-all duration-300 print:hidden bg-transparent">
+  <nav class="w-full flex items-center space-x-4 lg:mr-[119px]">
+    <ul class="w-full flex justify-center md:justify-end gap-8 uppercase">
       {
         navItems.map((item) => (
           <li>
             <a
               href={item.href}
-              class="tracking-[6.33px] text-base text-black"
+              class="tracking-wider lg:tracking-[6.33px] text-xs md:text-base text-black"
               aria-label={item.label}
             >
               {item.name}
