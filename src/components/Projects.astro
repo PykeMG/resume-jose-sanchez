@@ -1,0 +1,89 @@
+---
+const projects = [
+  {
+    title: "Tip Calculator",
+    description: "Reto de Frontend Mentor para practicar HTML, CSS y JavaScript. Calcula propinas de manera rápida y sencilla.",
+    tag: [
+        "HTML",
+        "CSS",
+        "JavaScript"
+    ],
+    link: "https://tipcalculatorbypykemg.netlify.app",
+    image: "/Tip-calculator.png",
+    github: "https://github.com/PykeMG/Frontend-Mentor-Tip-calculator-app"
+},
+  {
+    title: "Age Calculator",
+    description: "Reto de Frontend Mentor para practicar HTML, CSS y JavaScript. Calcula la edad exacta en años, meses y días.",
+    tag: [
+        "HTML",
+        "CSS",
+        "JavaScript"
+    ],
+    link: "https://agecalculatorbypykemg.netlify.app",
+    image: "/Age-calculator.png",
+    github: "https://github.com/PykeMG/Frontend-Mentor---Age-calculator-app-by-PykeMG"
+  },
+  {
+    title: "Pokedex",
+    description: "Pokedex interactiva que consume la API pública de PokéAPI. Muestra información detallada de cada Pokémon, incluyendo su imagen, tipo y habilidades.",
+    tag: [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "API",
+        "Vite"
+    ],
+    link: "https://pokemon-by-jose-sanchez.netlify.app",
+    image: "/Pokedex.png",
+    github: "https://github.com/PykeMG/Pokedex_vite"
+  }
+];
+import Live from '../assets/Live.astro';
+import GitHub from '../assets/GitHub.astro';
+import Pill from './Pill.astro';
+---
+<div class="px-4 py-8 print:py-8 print:mb-0 lg:mb-20 print:mt-10">
+    <h2 class="text-[#999999] text-[40px] lg:text-[80px] font-bold">Proyectos</h2>
+    <div class="mt-8 lg:mt-14 w-full print:mt-4">
+        {
+            projects.map((item) => (
+                <div class="mb-8 w-full gap-2 lg:gap-8 flex flex-col lg:flex-row lg:mb-16 print:mb-8 justify-center items-center">
+                  <div class="w-full lg:w-1/2 flex flex-col items-center">
+                    <img src={item.image} alt={item.title} class="mb-4 shadow-lg object-cover"/>
+                  </div>
+                    <div class="w-full lg:w-1/2 flex flex-col gap-4">
+                      <div>
+                        <h3 class="font-medium text-xl lg:text-2xl tracking-[0.64px] leading-8 text-[#6d6d6d]">{item.title}</h3>
+                      </div>
+                      <div>
+                        <p class="text-xs lg:text-lg lg:leading-8 tracking-widest text-[#6d6d6d]">{item.description}</p>
+                      </div>
+                      <div class="flex flex-wrap gap-4">
+                        {
+                        item.tag.map((tag) => (
+                          <ul class="mt-2 flex flex-wrap gap-4 print:hidden">
+                            <Pill tag={tag} />
+                          </ul>
+                        ))
+                      }
+                      </div>
+                      <div class="flex gap-8 items-center uppercase tracking-[6.33px]">
+                        <a href={item.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="flex items-center gap-1"
+                        >
+                          <span><GitHub /></span>Github</a>
+                        <a href={item.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="flex items-center gap-2 bg-black text-white px-4 py-2 hover:opacity-80 transition-opacity"
+                        ><span><Live /></span>Live</a>
+                      </div>
+                    </div>
+                </div>
+                        ))
+        }
+    </div>
+</div>

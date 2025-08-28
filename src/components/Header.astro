@@ -2,19 +2,21 @@
 const navItems = [
     { name: 'Experiencia', href: '/#experiencia' , label: 'Experiencia'},
     { name: 'Educación', href: '/#educacion' , label: 'Educación'},
+    { name: 'Proyectos', href: '/#proyectos' , label: 'Proyectos'},
     { name: 'Sobre mí', href: '/#sobre-mi' , label: 'Sobre mí'}
 ];
+import DownloadCV from "./DownloadCV.astro";
 ---
 
 <header id="site-header" class="fixed w-screen py-4 lg:py-8 flex items-center justify-between px-4 z-30 transition-all duration-300 print:hidden bg-transparent">
   <nav class="w-full flex items-center space-x-4 lg:mr-[119px]">
-    <ul class="w-full flex justify-center md:justify-end gap-8 uppercase">
+    <ul class="w-full flex items-center justify-center md:justify-end gap-5 lg:gap-8 uppercase">
       {
         navItems.map((item) => (
           <li>
             <a
               href={item.href}
-              class="tracking-wider lg:tracking-[6.33px] text-xs md:text-base text-black"
+              class="tracking-wider lg:tracking-[6px] text-xs md:text-base text-black"
               aria-label={item.label}
             >
               {item.name}
@@ -22,6 +24,10 @@ const navItems = [
           </li>
         ))
       }
+      <li class="hidden lg:flex items-center">
+        <DownloadCV />
+      </li>
+        
     </ul>
   </nav>
 </header>
@@ -34,11 +40,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     window.addEventListener("scroll", () => {
       if (window.scrollY > 80) {
-        header.classList.add("bg-white", "shadow-md");
-        header.classList.remove("bg-transparent");
+        header.classList.remove("py-4", "lg:py-8", "bg-transparent");
+        header.classList.add("bg-trasparent", "shadow-md", "backdrop-blur-md", "py-6");
       } else {
-        header.classList.add("bg-transparent");
-        header.classList.remove("bg-white", "shadow-md");
+        header.classList.remove("bg-trasparent", "shadow-md", "backdrop-blur-md", "py-6");
+        header.classList.add("py-4", "lg:py-8", "bg-transparent");
       }
     });
   });

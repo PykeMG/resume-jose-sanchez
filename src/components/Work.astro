@@ -19,8 +19,9 @@
         tags: ['GeneXus 8', 'GeneXus 18', 'AS400', 'DB2', 'SQL', 'COBOL', 'RPG']
         },
     ];
+    import Pill from './Pill.astro';
 ---
-<div class="px-4 py-8">
+<div class="px-4 py-4">
     <h2 class="text-[#999999] text-[40px] lg:text-[80px] font-bold">Experiencia</h2>
     <div class="mt-8 lg:mt-14 w-full print:mt-4">
         {
@@ -34,7 +35,7 @@
                     <p class="text-xs lg:text-lg leading-8 tracking-widest text-[#6d6d6d]">{item.description}</p>
                     <ul class="mt-2 flex flex-wrap gap-4 print:hidden">
                         {item.tags.map((tag) => (
-                            <li class="bg-[#EDEDED] text-[#666666] px-3.5 rounded-full text-xs tracking-wide leading-8">{tag}</li>
+                            <Pill tag: {tag}/>
                         ))}
                     </ul>
                 </div>
