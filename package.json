@@ -12,7 +12,6 @@
     "@fontsource/poppins": "^5.2.6",
     "@tailwindcss/vite": "^4.1.12",
     "astro": "^5.13.2",
-    "ninja-keys": "^1.2.2",
     "tailwindcss": "^4.1.12"
   }
 }
